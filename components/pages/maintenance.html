@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prerana Architects & Associates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Maintenance CSS -->
+  <link rel="stylesheet" href="../../assets/css/maintenance.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../assets/images/icons/favicon.ico" type="image/x-icon">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>Prerana Architects and Associates</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-container">
+      <!-- Left: GIF -->
+      <div class="flex-left">
+        <img src="../../assets/images/maintenance.gif" alt="Maintenance in progress" class="maintenance-gif">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="flex-right">
+        <h1>We'll Be Back Soon!</h1>
+        <p>
+          Our website is currently undergoing scheduled maintenance to improve your experience.<br>
+          We appreciate your patience and understanding. The site will be back online shortly.
+        </p>
+        <p>Thank you for visiting us!</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      &copy; <span id="year"></span> Prerana Architects and Associates. All rights reserved.
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

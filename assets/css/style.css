@@ -1,0 +1,125 @@
+/*====================
+: Root Variables
+====================*/
+:root {
+  --primary-color: #1a1a1a;       /* Charcoal dark */
+  --secondary-color: #f2f2f2;     /* Light gray */
+  --accent-color: #dcae63;        /* Golden accent */
+  --text-color: #333333;
+  --header-bg: #ffffff;
+  --footer-bg: #1a1a1a;
+  --footer-text: #f2f2f2;
+  --border-radius: 8px;
+}
+
+/*====================
+Global Styles
+====================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/*====================
+Header
+====================*/
+header {
+  background-color: var(--header-bg);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+header nav a {
+  margin-left: 25px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/*====================
+Main Content
+====================*/
+main {
+  padding: 80px 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #ffffff;
+  padding: 40px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/*====================
+Footer
+====================*/
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
