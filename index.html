@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prerana Architects and Associates</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prerana Architects and Associates</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  
-  <meta http-equiv="refresh" content="0; url=maintenance.html">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <!-- <meta http-equiv="refresh" content="0; url=maintenance.html"> -->
 
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Prerana Architects and Associates</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+<header>
+    <div class="logo-title">
+        <a href="index.html">
+            <img src="assets/icons/logo.png" alt="Logo" class="logo">
+        </a>
+        <h1>Prerana Architects and Associates</h1>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-menu">
+                <a href="#">Architectural Design</a>
+                <a href="#">Interior Design</a>
+                <a href="#">Construction Management</a>
+                <a href="#">Renovation & Remodeling</a>
+                <a href="#">Urban Planning</a>
+                <a href="#">Consultation</a>
+            </div>
+        </div>
+
+        <a href="#">Testimonials</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <main>
+</header>
+
+<!-- Hero Section -->
+<main>
+    <!-- Hero Section -->
     <section class="hero">
-      <h2>Building Spaces with Elegance</h2>
-      <p>Crafting stunning architectural and interior designs that transform spaces into experiences.</p>
+        <div class="hero-slider">
+            <!-- Slides will be dynamically added here -->
+        </div>
+
+        <div class="hero-content">
+            <h1>Transforming Spaces with Precision</h1>
+            <p>Architectural design, 3D modeling, and expert renovations.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+        </div>
     </section>
 
-    <!-- Features / Highlights Section -->
-    <section class="features">
-      <div class="feature">Feature 1</div>
-      <div class="feature">Feature 2</div>
-      <div class="feature">Feature 3</div>
-    </section>
+</main>
 
-  </main>
-
-  <!-- Footer -->
-  <footer>
+<!-- Footer -->
+<footer>
     &copy; <span id="year"></span> Prerana Architects and Associates. All rights reserved.
-  </footer>
+</footer>
 
-  <script>
-    // Dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script src="assets\js\utils.js"></script>
+<script src="assets\js\dynamicslider.js"></script>
 
 </body>
 </html>
