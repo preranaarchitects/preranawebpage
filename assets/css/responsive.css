@@ -1,69 +1,45 @@
-/*====================
-Tablet Devices
-====================*/
 @media (max-width: 1024px) {
-  header {
-    padding: 20px 30px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    header h1 {
+        font-size: 1.6rem;
+    }
 
-  header nav {
-    margin-top: 10px;
-  }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-  .hero h2 {
-    font-size: 2.5rem;
-  }
+    .hero p {
+        font-size: 1.1rem;
+    }
 
-  .hero p {
-    font-size: 1.1rem;
-  }
+    .features {
+        gap: 15px;
+    }
 
-  .features {
-    gap: 15px;
-  }
-
-  .feature {
-    padding: 30px;
-  }
+    .feature {
+        padding: 30px;
+    }
 }
 
-/*====================
-Mobile Devices
-====================*/
 @media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
+    header h1 {
+        font-size: 1.4rem;
+    }
 
-  header h1 {
-    font-size: 1.5rem;
-  }
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-  header nav a {
-    margin-left: 15px;
-    font-size: 0.95rem;
-  }
+    .hero p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
 
-  main {
-    padding: 50px 20px;
-  }
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .features {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .feature {
-    padding: 25px;
-  }
+    .feature {
+        padding: 25px;
+    }
 }

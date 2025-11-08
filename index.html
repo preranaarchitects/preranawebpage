@@ -7,72 +7,91 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-    <!-- <meta http-equiv="refresh" content="0; url=maintenance.html"> -->
-
 </head>
 <body>
 
-<header>
-    <div class="logo-title">
-        <a href="index.html">
-            <img src="assets/icons/logo.png" alt="Logo" class="logo">
+<!-- Header / Navbar -->
+<header class="bg-white shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="assets/icons/logo.png" alt="Logo" class="logo me-2">
+            <h1 class="h5 mb-0 text-dark fw-bold">Prerana Architects and Associates</h1>
         </a>
-        <h1>Prerana Architects and Associates</h1>
-    </div>
 
-    <nav class="navbar">
-        <a href="index.html">Home</a>
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="dropdown">
-            <a href="#">Services</a>
-            <div class="dropdown-menu">
-                <a href="#">Architectural Design</a>
-                <a href="#">Interior Design</a>
-                <a href="#">Construction Management</a>
-                <a href="#">Renovation & Remodeling</a>
-                <a href="#">Urban Planning</a>
-                <a href="#">Consultation</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium" href="#" id="servicesDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Architectural Design</a></li>
+                            <li><a class="dropdown-item" href="#">Interior Design</a></li>
+                            <li><a class="dropdown-item" href="#">Construction Management</a></li>
+                            <li><a class="dropdown-item" href="#">Renovation & Remodeling</a></li>
+                            <li><a class="dropdown-item" href="#">Urban Planning</a></li>
+                            <li><a class="dropdown-item" href="#">Consultation</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Contact</a></li>
+                </ul>
             </div>
-        </div>
-
-        <a href="#">Testimonials</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-    </nav>
-
+        </nav>
+    </div>
 </header>
 
 <!-- Hero Section -->
 <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <!-- Slides will be dynamically added here -->
-        </div>
+    <section class="hero d-flex align-items-center justify-content-center text-center position-relative">
+        <div class="hero-slider w-100 h-100 position-absolute top-0 start-0"></div>
 
-        <div class="hero-content">
+        <div class="hero-content container position-relative z-2">
             <h1>Transforming Spaces with Precision</h1>
             <p>Architectural design, 3D modeling, and expert renovations.</p>
-            <a href="#contact" class="btn">Get a Free Quote</a>
+            <a href="#contact" class="btn btn-warning text-dark fw-semibold">Get a Free Quote</a>
         </div>
     </section>
-
 </main>
 
 <!-- Footer -->
-<footer>
+<footer class="bg-dark text-light text-center py-4">
     &copy; <span id="year"></span> Prerana Architects and Associates. All rights reserved.
 </footer>
 
-<script src="assets\js\utils.js"></script>
-<script src="assets\js\dynamicslider.js"></script>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/dynamicslider.js"></script>
+
+<script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

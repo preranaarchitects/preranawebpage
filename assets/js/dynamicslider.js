@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sliderData = [
-        {type: 'image', src: './assets/images/image1.jpg'},
-        {type: 'image', src: './assets/images/image2.png'},
-        {type: 'image', src: './assets/images/image3.jpg'},
-        {type: 'image', src: './assets/images/image4.jpg'},
+        { type: 'image', src: './assets/images/image1.jpg' },
+        { type: 'image', src: './assets/images/image2.png' },
+        { type: 'image', src: './assets/images/image3.jpg' },
+        { type: 'image', src: './assets/images/image4.jpg' }
     ];
 
     const sliderContainer = document.querySelector('.hero-slider');
+    const heroContent = document.querySelector('.hero-content');
 
-    if (!sliderContainer) return;
+    if (!sliderContainer || !heroContent) return;
 
     if (sliderData.length === 0) {
-        sliderContainer.classList.add('hidden');
+        sliderContainer.classList.add('d-none'); // Bootstrap-friendly
         return;
     }
 
@@ -40,18 +41,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slides = document.querySelectorAll('.hero-slider .slide');
     let current = 0;
+    let slideTimeout;
 
     function showSlide(nextIndex) {
+        // Clear previous timeout to prevent overlapping
+        if (slideTimeout) clearTimeout(slideTimeout);
+
         const currentSlide = slides[current];
         const nextSlide = slides[nextIndex];
 
-        // Move current slide out to left
         currentSlide.classList.remove('active');
         currentSlide.classList.add('prev');
 
-        // Move next slide in from right
         nextSlide.classList.remove('prev');
         nextSlide.classList.add('active');
+
+        // Make sure hero content stays on top
+        heroContent.style.zIndex = 2;
 
         const media = sliderData[nextIndex];
         if (media.type === 'video') {
@@ -62,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 video.onended = () => nextSlideFunc();
             }
         } else {
-            setTimeout(() => {
+            slideTimeout = setTimeout(() => {
                 nextSlideFunc();
             }, 3000);
         }
@@ -75,6 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(next);
     }
 
-    // Start slider
+    // Initialize slider
     showSlide(current);
+
+    // Optional: Pause slider on hover for desktop
+    //sliderContainer.addEventListener('mouseenter', () => clearTimeout(slideTimeout));
+    //sliderContainer.addEventListener('mouseleave', () => nextSlideFunc());
 });
