@@ -1,0 +1,45 @@
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .features {
+        gap: 15px;
+    }
+
+    .feature {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature {
+        padding: 25px;
+    }
+}
