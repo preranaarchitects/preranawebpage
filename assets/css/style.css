@@ -46,6 +46,10 @@ header h1 {
     object-fit: contain;
 }
 
+a.d-flex.align-items-center > div {
+    line-height: 1.1;
+}
+
 /* Hero Section */
 .hero {
     min-height: 85vh;
