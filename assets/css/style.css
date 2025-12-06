@@ -7,9 +7,23 @@
     --footer-bg: #1a1a1a;
     --footer-text: #f2f2f2;
     --border-radius: 8px;
+    --radius: 8px;
+    --shadow: 0 6px 18px rgba(16,24,40,0.08);
 }
 
-/* Reset & base */
+@media (max-width: 768px) {
+    .project-image-wrapper {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-image-wrapper {
+        height: 150px;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +35,15 @@ html, body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 a {
@@ -33,11 +56,18 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* Header & Navbar */
-header h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
+.header-nav {
+    padding: 0 !important;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.navbar-toggler {
+    padding: 0.25rem !important;
+    margin-left: 10px;
 }
 
 .logo {
@@ -50,7 +80,6 @@ a.d-flex.align-items-center > div {
     line-height: 1.1;
 }
 
-/* Hero Section */
 .hero {
     min-height: 85vh;
     position: relative;
@@ -75,13 +104,21 @@ a.d-flex.align-items-center > div {
     margin: 10px auto 20px;
 }
 
+.hero-content h1,
+.hero-content p {
+    text-shadow:
+            -1px -1px 1px rgba(16,24,40,0.08),
+            1px -1px 1px rgba(16,24,40,0.08),
+            -1px  1px 1px rgba(16,24,40,0.08),
+            1px  1px 1px rgba(16,24,40,0.08);
+}
+
 .btn {
     border-radius: var(--border-radius);
     padding: 10px 25px;
     font-weight: 600;
 }
 
-/* Hero Slider */
 .hero-slider {
     position: absolute;
     top: 0;
@@ -101,6 +138,7 @@ a.d-flex.align-items-center > div {
     display: flex;
     justify-content: center;
     align-items: center;
+
     opacity: 0;
     transition: left 1s ease-in-out, opacity 1s ease-in-out;
     z-index: 0;
@@ -117,25 +155,19 @@ a.d-flex.align-items-center > div {
     opacity: 0;
 }
 
-.hero-slider img, .hero-slider video {
+.hero-slider img,
+.hero-slider video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Footer */
-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    font-size: 0.9rem;
+.hero,
+.hero-slider,
+.hero-slider .slide {
+    overflow: hidden !important;
 }
 
-/* Dropdown hover fix */
-.navbar .dropdown-menu {
-    border-radius: var(--border-radius);
-}
-
-/* Features Section (if used later) */
 .features {
     display: flex;
     justify-content: space-around;
@@ -151,4 +183,63 @@ footer {
     text-align: center;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+.navbar .dropdown-menu {
+    border-radius: var(--border-radius);
+}
+
+/* Service cards */
+.service-card{
+    background:linear-gradient(180deg, #fff, #fcfcfc);
+    border-radius:var(--radius);
+    border:1px solid rgba(17,19,24,0.05);
+    box-shadow:var(--shadow);
+}
+.service-card .icon{font-size:26px}
+.service-card h5{margin-bottom:.5rem}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.section-header h2 .section-underline {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #dcae63; /* brand accent color */
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.project-item {
+    transition: all 0.3s ease;
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 250px; /* desktop height */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px; /* optional */
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* maintains aspect ratio & fills the div */
 }
