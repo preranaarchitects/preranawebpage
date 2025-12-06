@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sliderData = [
+        { type: 'video', src: './assets/images/video1.mp4' },
         { type: 'image', src: './assets/images/image1.jpg' },
-        { type: 'image', src: './assets/images/image2.png' },
+        { type: 'image', src: './assets/images/image2.jpg' },
         { type: 'image', src: './assets/images/image3.jpg' },
-        { type: 'image', src: './assets/images/image4.jpg' }
+        { type: 'image', src: './assets/images/image4.jpg' },
+        { type: 'image', src: './assets/images/image5.jpg' },
+        { type: 'image', src: './assets/images/image6.jpg' }
     ];
 
     const sliderContainer = document.querySelector('.hero-slider');
