@@ -243,3 +243,10 @@ footer {
     height: 100%;
     object-fit: cover; /* maintains aspect ratio & fills the div */
 }
+
+.service-icon-size {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    /*filter: invert(48%) sepia(83%) saturate(420%) hue-rotate(350deg) brightness(95%) contrast(90%);*/
+}
