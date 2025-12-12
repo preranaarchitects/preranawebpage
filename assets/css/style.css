@@ -39,6 +39,7 @@ html, body {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar,
@@ -201,9 +202,25 @@ footer {
     border-radius:var(--radius);
     border:1px solid rgba(17,19,24,0.05);
     box-shadow:var(--shadow);
+    position: relative;
 }
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+.service-card a {
+    position: relative;
+    z-index: 2;
+}
+
 .service-card .icon{font-size:26px}
 .service-card h5{margin-bottom:.5rem}
+
+header .container-fluid {
+    cursor: default;
+}
+
 
 .section-header h2 {
     font-size: 2.5rem;
