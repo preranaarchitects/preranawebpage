@@ -1,0 +1,100 @@
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.project-modal-close:hover {
+    color: #dcae63;
+}
+
+.project-modal-content {
+    margin: 5% auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+#project-modal-main-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.project-modal-thumbnails {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-modal-thumbnails img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.project-modal-thumbnails img.active {
+    border-color: #dcae63;
+}
+
+
+/**/
+
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Slight zoom on hover */
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+/* Overlay button initially hidden */
+.overlay-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff; /* white text over image */
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-decoration: none;
+    opacity: 0; /* hidden initially */
+    transition: none; /* appear instantly */
+}
+
+/* Show button instantly on hover */
+.project-card:hover .overlay-btn {
+    opacity: 1;
+}
+
+/* Optional hover effect on text */
+.overlay-btn:hover {
+    text-decoration: none;
+    color: #dcae63; /* subtle accent on hover */
+}

@@ -1,16 +1,17 @@
 function initProjectFilters(container = document) {
     const filterButtons = container.querySelectorAll('#project-filters button');
-    const items = container.querySelectorAll('.project-item');
 
-    if (!filterButtons.length || !items.length) return;
+    if (!filterButtons.length) return;
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', function () {
-            // Remove active class from all buttons
             filterButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
 
-            const filter = this.getAttribute('data-filter');
+            const filter = this.dataset.filter;
+
+            // Re-select items each time (for dynamic cards)
+            const items = container.querySelectorAll('.project-item');
 
             items.forEach(item => {
                 if (filter === '*' || item.dataset.category === filter) {
@@ -23,8 +24,3 @@ function initProjectFilters(container = document) {
         });
     });
 }
-
-// Optional: automatically initialize for the main document
-document.addEventListener('DOMContentLoaded', () => {
-    initProjectFilters();
-});

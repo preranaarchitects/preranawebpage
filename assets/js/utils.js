@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Function to attach reload to logo
+    function attachLogoReload() {
+        const logoLink = document.querySelector('a[href="index.html"]');
+        if (logoLink) {
+            logoLink.addEventListener("click", (e) => {
+                e.preventDefault(); // prevent default navigation
+                window.location.href = "index.html"; // reload main URL
+            });
+        }
+    }
+
+    attachLogoReload();
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Footer year
     const yearEl = document.getElementById('year');

@@ -1,0 +1,35 @@
+{
+  "villa": {
+    "spannerway": [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg"
+    ],
+    "greenmeadows": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+
+  "apartment": {
+    "prerana": [
+      "img1.jpg",
+      "img2.jpg"
+    ],
+    "saikrupa": [
+      "img1.jpg"
+    ]
+  },
+
+  "commercial": {
+    "highview": [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg"
+    ],
+    "businesshub": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  }
+}

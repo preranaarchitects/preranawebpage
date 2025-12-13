@@ -1,0 +1,40 @@
+{
+  "villa": [
+    {
+      "name": "Spanner Way",
+      "slug": "spannerway",
+      "description": "Luxury independent villa project"
+    },
+    {
+      "name": "Green Meadows",
+      "slug": "greenmeadows",
+      "description": "Premium villas surrounded by greenery"
+    }
+  ],
+
+  "apartment": [
+    {
+      "name": "Prerana Residency",
+      "slug": "prerana",
+      "description": "Modern apartment living"
+    },
+    {
+      "name": "Sai Krupa",
+      "slug": "saikrupa",
+      "description": "Comfortable urban apartments"
+    }
+  ],
+
+  "commercial": [
+    {
+      "name": "High View Plaza",
+      "slug": "highview",
+      "description": "Premium commercial space"
+    },
+    {
+      "name": "Business Hub",
+      "slug": "businesshub",
+      "description": "Modern commercial complex"
+    }
+  ]
+}
