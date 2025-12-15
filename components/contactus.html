@@ -1,64 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="contact-section py-5">
+    <div class="container">
 
-<section class="contact-section">
-    <div class="contact-container">
-
-        <!-- Left Side: Map + Info -->
-        <div class="contact-info">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1988161061!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDEuMiJF!5e0!3m2!1sen!2sin!4v0000000000"
-                        style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-
-            <div class="contact-details">
-                <h3>Contact Information</h3>
-                <p><strong>Address:</strong> 123 Elegant Street, Bengaluru, India</p>
-                <p><strong>Phone:</strong> +91 98765 43210</p>
-                <p><strong>Email:</strong> info@example.com</p>
-            </div>
-        </div>
-
-        <!-- Right Side: Form -->
-        <div class="contact-form">
-            <h3>Send Us a Message</h3>
-
-            <form id="contactForm">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Submit</button>
-            </form>
-
-            <p id="successMsg" class="success-msg" style="display:none;">
-                ✔ Your message has been sent successfully!
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <h2 class="h1 fw-bold text-dark position-relative d-inline-block">
+                Contact Us
+                <span class="section-underline"></span>
+            </h2>
+            <p class="text-muted fs-5 mt-3 mx-auto">
+                From concept to completion, we design and build spaces that reflect your
+                lifestyle and aspirations. Get in touch with us and let’s start shaping
+                your dream project.
             </p>
         </div>
 
+        <div class="row g-3 align-items-stretch contact-wrapper">
+
+            <div class="col-lg-6">
+                <div class="contact-info-box h-100">
+
+                    <div class="map-container mb-4 position-relative">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5274198856287!2d77.63058227484426!3d13.12909698720094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae194043016955%3A0xfc08551872f3dd12!2sCountry%20Nest!5e0!3m2!1sen!2sin!4v1765805485346!5m2!1sen!2sin"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                        </iframe>
+
+                        <div class="map-label map-label-right">
+                            <div class="map-label-text">
+                                <h6>Prerana Architects & Associates</h6>
+                                <p>Country Nest, Bengaluru</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-details">
+                        <h5 class="fw-semibold mb-4">Contact Information</h5>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Address</span>
+                                <p>#37, Country nest, BSF STS Rd,<br>Sathnur Village, Bengaluru,<br>Karnataka 560063</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Phone</span>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Email</span>
+                                <p>contact@preranaarchitects.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="contact-form-box h-100">
+                    <h5 class="fw-semibold mb-5">Start Your Project With Us</h5>
+
+                    <form id="contactForm">
+
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Your name" required>
+                        </div>
+
+                        <!-- Email & Phone -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="you@email.com" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Project Type</label>
+                            <select class="form-select" required>
+                                <option value="">Select</option>
+                                <option>Villa / Independent House</option>
+                                <option>Apartment / Flat</option>
+                                <option>Interior Design</option>
+                                <option>Commercial</option>
+                                <option>Renovation</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Project Location</label>
+                            <input type="text" class="form-control" placeholder="City / Area">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Estimated Budget</label>
+                                <select class="form-select">
+                                    <option value="">Select</option>
+                                    <option>Below ₹20 Lakhs</option>
+                                    <option>₹20 – ₹50 Lakhs</option>
+                                    <option>₹50 Lakhs – ₹1 Cr</option>
+                                    <option>Above ₹1 Cr</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Expected Start Time</label>
+                                <select class="form-select">
+                                    <option value="">Select</option>
+                                    <option>Immediately</option>
+                                    <option>Within 3 Months</option>
+                                    <option>3 – 6 Months</option>
+                                    <option>Just Exploring</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">How did you hear about us?</label>
+                            <select class="form-select">
+                                <option value="">Select</option>
+                                <option>Google Search</option>
+                                <option>Instagram / Social Media</option>
+                                <option>Reference</option>
+                                <option>Existing Client</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark px-4 w-100">
+                            Request Consultation
+                        </button>
+                    </form>
+
+                    <p id="successMsg" class="success-msg mt-3" style="display:none;">
+                        ✔ Thank you! Our team will contact you shortly.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-<!--<script src="script.js"></script>-->
-</body>
-</html>
