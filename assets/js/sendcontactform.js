@@ -1,9 +1,7 @@
-const {
-    EMAILJS_USER_ID,
-    EMAILJS_SERVICE_ID,
-    ADMIN_TEMPLATE_ID,
-    CUSTOMER_TEMPLATE_ID
-} = window.__ENV__;
+const EMAILJS_USER_ID = 'bf7Dsy4ovPLzM6CHc';
+const EMAILJS_SERVICE_ID = 'service_d8nsbz9';
+const ADMIN_TEMPLATE_ID = 'template_jr8qf8h';
+const CUSTOMER_TEMPLATE_ID = 'template_hkzges3';
 
 // Init EmailJS
 emailjs.init(EMAILJS_USER_ID);
