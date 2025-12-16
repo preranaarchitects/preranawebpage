@@ -1,7 +1,6 @@
 function initProjects() {
-
     const grid = document.getElementById("projects-grid");
-    if (!grid) return; // safety
+    if (!grid) return;
 
     const modal = document.getElementById("project-modal");
     const mainImg = document.getElementById("project-modal-main-img");
@@ -9,8 +8,8 @@ function initProjects() {
     const closeBtn = document.querySelector(".project-modal-close");
 
     Promise.all([
-        fetch("assets/data/project.json").then(r => r.json()),
-        fetch("assets/data/projectoverlay.json").then(r => r.json())
+        fetch("../assets/data/project.json").then(r => r.json()),
+        fetch("../assets/data/projectoverlay.json").then(r => r.json())
     ]).then(([projectData, overlayData]) => {
 
         // BUILD CARDS
@@ -22,21 +21,20 @@ function initProjects() {
                 col.dataset.category = category;
                 col.dataset.slug = project.slug;
 
+                // ✅ SEO-friendly card
                 col.innerHTML = `
           <div class="card h-100 project-card">
-    <div class="project-image-wrapper position-relative">
-        <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
-             class="img-fluid project-img"
-             alt="${project.name}">
-
-        <!-- Button shows only on hover -->
-        <a href="#" class="overlay-btn">View Full Project</a>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">${project.name}</h5>
-        <p class="card-text small text-muted">${project.description}</p>
-    </div>
-</div>
+            <div class="project-image-wrapper position-relative">
+                <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
+                     class="img-fluid project-img"
+                     alt="${project.name} - ${category} project in Bangalore">
+                <a href="#" class="overlay-btn">View Full Project</a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">${project.name}</h5>
+                <p class="card-text small text-muted">${project.description}</p>
+            </div>
+          </div>
         `;
 
                 grid.appendChild(col);
@@ -56,15 +54,20 @@ function initProjects() {
             if (!images) return;
 
             thumbnails.innerHTML = "";
+
+            // Main image with SEO-friendly ALT
             mainImg.src = `assets/portfolio/${category}/${slug}/${images[0]}`;
+            mainImg.alt = `${slug} project main view - ${category}`;
 
             images.forEach((img, i) => {
                 const t = document.createElement("img");
                 t.src = `assets/portfolio/${category}/${slug}/${img}`;
+                t.alt = `${slug} project image ${i + 1} - ${category}`; // ✅ SEO ALT
                 if (i === 0) t.classList.add("active");
 
                 t.onclick = () => {
                     mainImg.src = t.src;
+                    mainImg.alt = t.alt; // Update main image ALT when thumbnail clicked
                     thumbnails.querySelectorAll("img").forEach(x => x.classList.remove("active"));
                     t.classList.add("active");
                 };

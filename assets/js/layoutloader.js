@@ -27,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
     loadSection("hero", (container) => {
         initHeroSlider(container);
     });
-    loadSection("services");
-    loadSection("projects", (container) => {
+    loadSection("our-services");
+    loadSection("our-projects", (container) => {
         initProjectFilters(container);
     });
-    loadSection("aboutus");
-    loadSection("contactus");
+    loadSection("about-us");
+    loadSection("contact-us", (container) => {
+        initContactForm(container); // Initialize EmailJS form after HTML is loaded
+    });
     loadSection("footer");
 });
 
