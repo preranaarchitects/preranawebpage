@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8cdc4cb-cfbe-4682-b958-0b8a249d8700" name="Changes" comment="Fixed the issue of scroll and segregated the code into different .html files">
-      <change afterPath="$PROJECT_DIR$/assets/css/projectoverlay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/projects.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/project.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/projectoverlay.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/projectoverlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/projectfilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/projectfilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/portfolio/apartment1/apartment1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/portfolio/commertial1/commertial1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/portfolio/villa1/villa1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="ba98d6ce-42a7-464f-be7b-c234a9937dbe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,97 +16,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="package.json" />
-        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="36dUgkXe9NnmC7DCiFCAelR3l16" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Webpage-Phase1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "git-widget-placeholder": "Webpage-Phase1",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cheth\OneDrive\Documents\Prerana\preranawebpage\assets\data" />
-      <recent name="C:\Users\cheth\OneDrive\Documents\Prerana\preranawebpage\components" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c8cdc4cb-cfbe-4682-b958-0b8a249d8700" name="Changes" comment="Scroll bar hidden from the page" />
-      <created>1765336083677</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1765336083677</updated>
-      <workItem from="1765336115625" duration="1423000" />
-      <workItem from="1765380332086" duration="6251000" />
-      <workItem from="1765416465034" duration="524000" />
-      <workItem from="1765498584246" duration="6323000" />
-      <workItem from="1765565598480" duration="12461000" />
-    </task>
-    <task id="LOCAL-00001" summary="Fixed the issue of scroll and segregated the code into different .html files">
-      <option name="closed" value="true" />
-      <created>1765504730045</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1765504730045</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed the issue of scroll and segregated the code into different .html files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the issue of scroll and segregated the code into different .html files" />
   </component>
 </project>

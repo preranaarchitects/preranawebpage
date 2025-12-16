@@ -8,9 +8,7 @@
                 <span class="section-underline"></span>
             </h2>
             <p class="text-muted fs-5 mt-3 mx-auto">
-                From concept to completion, we design and build spaces that reflect your
-                lifestyle and aspirations. Get in touch with us and let’s start shaping
-                your dream project.
+                From concept to completion, we help clients with architectural design, interior planning, and turnkey construction services.
             </p>
         </div>
 
@@ -18,23 +16,14 @@
 
             <div class="col-lg-6">
                 <div class="contact-info-box h-100">
-
                     <div class="map-container mb-4 position-relative">
                         <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5274198856287!2d77.63058227484426!3d13.12909698720094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae194043016955%3A0xfc08551872f3dd12!2sCountry%20Nest!5e0!3m2!1sen!2sin!4v1765805485346!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31083.910693656297!2d77.61424794999999!3d13.13153605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x643ac947f17e92bf%3A0x3a02be39afa931a4!2sPrerana%20Architects%20%26%20Associates!5e0!3m2!1sen!2sin!4v1765884657536!5m2!1sen!2sin"
                                 loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"
                                 allowfullscreen>
                         </iframe>
-
-                        <div class="map-label map-label-right">
-                            <div class="map-label-text">
-                                <h6>Prerana Architects & Associates</h6>
-                                <p>Country Nest, Bengaluru</p>
-                            </div>
-                        </div>
                     </div>
-
 
                     <div class="contact-details">
                         <h5 class="fw-semibold mb-4">Contact Information</h5>
@@ -45,7 +34,11 @@
                             </div>
                             <div class="contact-text">
                                 <span>Address</span>
-                                <p>#37, Country nest, BSF STS Rd,<br>Sathnur Village, Bengaluru,<br>Karnataka 560063</p>
+                                <p>Prerana Architects & Associates<br>No. 37, BSF STS Road
+                                    <br>Near Country Nest
+                                    <br>Sathanur, Bengaluru – 560063
+                                    <br>Karnataka, India
+                                </p>
                             </div>
                         </div>
 
@@ -81,24 +74,25 @@
                         <!-- Name -->
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" placeholder="Your name" required>
+                            <input type="text" id="fullName" class="form-control" placeholder="Your name" autocomplete="off" required>
                         </div>
 
                         <!-- Email & Phone -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="you@email.com" required>
+                                <input type="email" id="email" class="form-control" placeholder="you@email.com" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Phone</label>
-                                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                                <input type="tel" id="phone" class="form-control" placeholder="XXXXX XXXXX" required>
                             </div>
                         </div>
 
+                        <!-- Project Type -->
                         <div class="mb-3">
                             <label class="form-label">Project Type</label>
-                            <select class="form-select" required>
+                            <select class="form-select" id="projectType" required>
                                 <option value="">Select</option>
                                 <option>Villa / Independent House</option>
                                 <option>Apartment / Flat</option>
@@ -108,15 +102,17 @@
                             </select>
                         </div>
 
+                        <!-- Project Location -->
                         <div class="mb-3">
                             <label class="form-label">Project Location</label>
-                            <input type="text" class="form-control" placeholder="City / Area">
+                            <input type="text" class="form-control" id="location" placeholder="City / Area">
                         </div>
 
+                        <!-- Budget & Start Time -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Estimated Budget</label>
-                                <select class="form-select">
+                                <select class="form-select" id="budget">
                                     <option value="">Select</option>
                                     <option>Below ₹20 Lakhs</option>
                                     <option>₹20 – ₹50 Lakhs</option>
@@ -127,7 +123,7 @@
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Expected Start Time</label>
-                                <select class="form-select">
+                                <select class="form-select" id="startTime">
                                     <option value="">Select</option>
                                     <option>Immediately</option>
                                     <option>Within 3 Months</option>
@@ -137,15 +133,22 @@
                             </div>
                         </div>
 
+                        <!-- Referral Source -->
                         <div class="mb-4">
                             <label class="form-label">How did you hear about us?</label>
-                            <select class="form-select">
+                            <select class="form-select" id="referral">
                                 <option value="">Select</option>
                                 <option>Google Search</option>
                                 <option>Instagram / Social Media</option>
                                 <option>Reference</option>
                                 <option>Existing Client</option>
                             </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-dark px-4 w-100">

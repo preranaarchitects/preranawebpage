@@ -2,8 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Prerana Architects and Associates delivers expert architectural design, interior design, construction management, renovation, remodeling, and urban planning services. We specialize in villas, apartments, standalone buildings, commercial spaces, office interiors, and 3D planning solutions. Transform your ideas into functional, aesthetic, and sustainable spaces with our experienced team."/>
+    <meta name="description" content="Prerana Architects delivers expert industrial and residential architectural design in Bangalore. Transform your ideas into functional, aesthetic, and sustainable spaces with our experienced team."/>
     <meta name="keywords"
           content="Prerana Architects and Associates, architectural design services, interior design company, construction management, renovation and remodeling, urban planning consultants, building construction services, residential architecture firm, commercial architecture firm, villa construction, apartment design, office interior design, 3D architectural planning, turnkey interior solutions"/>
     <link rel="canonical" href="https://preranaarchitects.com/"/>
@@ -15,13 +14,18 @@
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Prerana Architects and Associates"/>
     <meta property="og:url" content="https://preranaarchitects.com/"/>
-    <meta property="og:image" content="https://preranaarchitects.com/assets/images/og-image.png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
+
+    <meta property="og:image" content="https://preranaarchitects.com/assets/images/og-image.png">
+    <meta property="og:image:alt" content="Prerana Architects architectural and interior design projects in Bangalore">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image"/>
     <title>Prerana Architects and Associates</title>
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -38,11 +42,78 @@
 <div id="header" data-file="menu.html"></div>
 
 <main>
-    <div id="hero" data-file="hero.html"></div>
-    <div id="services" data-file="services.html"></div>
-    <div id="projects" data-file="projects.html"></div>
-    <div id="aboutus" data-file="aboutus.html"></div>
-    <div id="contactus" data-file="contactus.html"></div>
+
+    <div id="hero" data-file="hero.html">
+        <h1>Industrial & Residential Architects in Bangalore | Prerana Architects</h1>
+        <p>Transform your ideas into functional, aesthetic, and sustainable spaces with our expert team.</p>
+        <h2>Expert Architectural Solutions for Residential & Industrial Projects</h2>
+    </div>
+
+    <div id="our-services" data-file="services.html">
+        <h2>Architectural Design Services in Bangalore</h2>
+
+        <div class="service-item">
+            <h3>Residential Architecture</h3>
+            <p>Custom home designs, apartments, and villas crafted for aesthetics and functionality.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Industrial & Warehouse Design</h3>
+            <p>Efficient and practical designs for factories, warehouses, and industrial facilities.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Interior Design</h3>
+            <p>Office and residential interior planning with 3D modeling and visualization.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Renovation & Remodeling</h3>
+            <p>Updating existing spaces to modern, functional, and aesthetic layouts.</p>
+        </div>
+    </div>
+
+    <div id="our-projects" data-file="projects.html">
+        <h2>Our Architectural Projects & Portfolio</h2>
+
+        <div class="project-item">
+            <h3>Residential Projects</h3>
+            <p>Custom homes, apartments, and villas showcasing our design expertise.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Industrial & Warehouse Projects</h3>
+            <p>Factories, warehouses, and industrial layouts optimized for efficiency and aesthetics.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Interior Design Projects</h3>
+            <p>Office and residential interiors designed for functionality and visual appeal.</p>
+        </div>
+    </div>
+
+    <div id="about-us" data-file="aboutus.html">
+        <h2>About Prerana Architects | Experienced Architects in Bangalore</h2>
+        <p>Prerana Architects delivers innovative architectural, interior, and construction solutions for residential and industrial clients in Bangalore.</p>
+
+        <h3>Our Mission</h3>
+        <p>To create functional, aesthetic, and sustainable spaces that meet client needs.</p>
+
+        <h3>Our Experience</h3>
+        <p>Years of expertise in designing homes, industrial facilities, and office interiors.</p>
+    </div>
+
+    <div id="contact-us" data-file="contactus.html">
+        <h2>Contact Prerana Architects | Architectural Services Bangalore</h2>
+        <p>Get in touch for expert architectural design, interior planning, and construction management.</p>
+
+        <h3>Our Office</h3>
+        <p>Located in Bangalore, we serve residential and industrial clients across the city.</p>
+
+        <h3>Reach Us</h3>
+        <p>Phone, email, or contact form for project inquiries and consultations.</p>
+    </div>
+
 </main>
 
 <div id="footer" data-file="footer.html"></div>
@@ -57,11 +128,23 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/seostandard.js"></script>
 <script src="assets/js/utils.js"></script>
 <script src="assets/js/projectfilter.js"></script>
 <script src="assets/js/dynamicslider.js"></script>
 <script src="assets/js/layoutloader.js"></script>
 <script src="assets/js/projectoverlay.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    window.__ENV__ = {
+        EMAILJS_USER_ID:'bf7Dsy4ovPLzM6CHc',
+        EMAILJS_SERVICE_ID:'service_d8nsbz9',
+        ADMIN_TEMPLATE_ID:'template_jr8qf8h',
+        CUSTOMER_TEMPLATE_ID:'template_hkzges3'
+    };
+</script>
+
+<script src="assets/js/sendcontactform.js"></script>
 
 </body>
 </html>

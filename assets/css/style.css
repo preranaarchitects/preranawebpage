@@ -267,3 +267,14 @@ header .container-fluid {
     object-fit: contain;
     /*filter: invert(48%) sepia(83%) saturate(420%) hue-rotate(350deg) brightness(95%) contrast(90%);*/
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
