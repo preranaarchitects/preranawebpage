@@ -1,20 +1,11 @@
-/* ================================
-   CONTACT SECTION – PREMIUM UI
-================================ */
-
 .contact-section {
     background: #f7f7f7;
 }
 
-/* Wrapper */
 .contact-wrapper {
     max-width: 1140px;
     margin: 0 auto;
 }
-
-/* ================================
-   LEFT – MAP + INFO
-================================ */
 
 .contact-info-box {
     background: #ffffff;
@@ -26,7 +17,6 @@
     height: 100%;
 }
 
-/* Map */
 .map-container {
     position: relative;
     height: 340px;
@@ -40,7 +30,6 @@
     border: none;
 }
 
-/* Contact Details */
 .contact-details {
     margin-top: 30px;
 }
@@ -158,3 +147,73 @@
 .is-invalid {
     border-color: #dc3545;
 }
+
+/* ================================
+   Social Media
+================================ */
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+.contact-social a i {
+    color: var(--primary-color);
+    font-size: 24px;
+    transition: color 0.35s ease;
+}
+
+.contact-social a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: var(--shadow);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.contact-social a:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+    background: var(--accent-color);
+}
+
+.contact-social a:hover i {
+    color: #ffffff;
+}
+
+.contact-social a[aria-label="Facebook"] i {
+    color: #1877F2;
+}
+
+.contact-social a[aria-label="Instagram"] i {
+    color: #E4405F;
+}
+
+.contact-social a[aria-label="LinkedIn"] i {
+    color: #0A66C2;
+}
+
+.contact-social a[aria-label="WhatsApp"] i {
+    color: #25D366;
+}
+
+.contact-social a[aria-label="Google Business"] i {
+    color: #4285F4;
+}
+
+.contact-social a:hover .fa-instagram { color: #fff; }
+.contact-social a:hover .fa-facebook-f { color: #fff; }
+.contact-social a:hover .fa-linkedin-in { color: #fff; }
+.contact-social a:hover .fa-whatsapp { color: #fff; }

@@ -89,6 +89,9 @@ function initHeroSlider(container) {
             const p = heroContent.querySelector('p');
             if(h1) h1.textContent = textData.h1;
             if(p) p.textContent = textData.p;
+            heroContent.classList.remove('animate');
+            void heroContent.offsetWidth; // force reflow
+            heroContent.classList.add('animate');
         }
 
         if (media.type === 'video') {
