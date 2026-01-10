@@ -1,0 +1,57 @@
+.service-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease,
+            background 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glow layer */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            120deg,
+            rgba(214,127,61,0.15),
+            rgba(214,127,61,0.05),
+            transparent
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 0;
+}
+
+/* POP + HIGHLIGHT on hover */
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--secondary-color);
+    background: #fffdf9;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* keep text above glow */
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* text color enhancement */
+.service-card:hover h3 {
+    color: var(--accent-color);
+}
+
+.service-card:hover p {
+    color: #444;
+}
