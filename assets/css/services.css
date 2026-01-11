@@ -55,3 +55,11 @@
 .service-card:hover p {
     color: #444;
 }
+
+.service-hidden {
+    display: none;
+}
+
+.services-expanded .service-hidden {
+    display: block;
+}
