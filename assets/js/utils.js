@@ -81,7 +81,7 @@ document.addEventListener('click', function (e) {
         } else {
             // Expand
             grid.classList.add('services-expanded');
-            e.target.textContent = 'Show Less';
+            e.target.textContent = 'Show Less Services';
         }
     }
 });

@@ -33,3 +33,11 @@
     opacity: 1;
     bottom: 25px;
 }
+
+.project-hidden {
+    display: none;
+}
+
+.project-expanded .project-hidden {
+    display: block;
+}
