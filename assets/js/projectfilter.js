@@ -1,26 +1,27 @@
 function initProjectFilters(container = document) {
-    const filterButtons = container.querySelectorAll('#project-filters button');
+    const buttons = container.querySelectorAll("#project-filters button");
+    if (!buttons.length) return;
 
-    if (!filterButtons.length) return;
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', function () {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            const filter = this.dataset.filter;
-
-            // Re-select items each time (for dynamic cards)
-            const items = container.querySelectorAll('.project-item');
+            const filter = btn.dataset.filter;
+            const items = container.querySelectorAll(".project-item");
 
             items.forEach(item => {
-                if (filter === '*' || item.dataset.category === filter) {
-                    item.style.display = '';
-                    item.classList.add('animate__animated', 'animate__fadeIn');
+                if (filter === "*" || item.dataset.category === filter) {
+                    item.style.display = "";
                 } else {
-                    item.style.display = 'none';
+                    item.style.display = "none";
                 }
             });
+
+            // 🔑 VERY IMPORTANT
+            if (window.refreshProjectsToggle) {
+                window.refreshProjectsToggle();
+            }
         });
     });
 }

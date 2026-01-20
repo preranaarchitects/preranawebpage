@@ -1,6 +1,9 @@
 function initProjects() {
     const grid = document.getElementById("projects-grid");
-    if (!grid) return;
+    const toggleBtn = document.getElementById("toggleProjectsBtn");
+    const projectsSection = document.getElementById("projects");
+
+    if (!grid || !toggleBtn || !projectsSection) return;
 
     const modal = document.getElementById("project-modal");
     const mainImg = document.getElementById("project-modal-main-img");
@@ -12,36 +15,82 @@ function initProjects() {
         fetch("../assets/data/projectoverlay.json").then(r => r.json())
     ]).then(([projectData, overlayData]) => {
 
-        // BUILD CARDS
+        let totalProjects = 0;
+
         Object.entries(projectData).forEach(([category, projects]) => {
             projects.forEach(project => {
+                totalProjects++;
 
                 const col = document.createElement("div");
                 col.className = "col-sm-6 col-md-4 project-item";
                 col.dataset.category = category;
                 col.dataset.slug = project.slug;
 
-                // ✅ SEO-friendly card
                 col.innerHTML = `
-          <div class="card h-100 project-card">
-            <div class="project-image-wrapper position-relative">
-                <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
-                     class="img-fluid project-img"
-                     alt="${project.name} - ${category} project in Bangalore">
-                <a href="#" class="overlay-btn">View Full Project</a>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${project.name}</h5>
-                <p class="card-text small text-muted">${project.description}</p>
-            </div>
-          </div>
-        `;
+                    <div class="card h-100 project-card">
+                        <div class="project-image-wrapper position-relative">
+                            <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
+                                 class="img-fluid project-img"
+                                 alt="${project.name}">
+                            <a href="#" class="overlay-btn">View More Projects</a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${project.name}</h5>
+                            <p class="card-text small text-muted">${project.description}</p>
+                        </div>
+                    </div>
+                `;
 
                 grid.appendChild(col);
             });
         });
 
-        // OVERLAY CLICK
+        /* ===============================
+           SHOW MORE / SHOW LESS LOGIC
+        ================================ */
+        window.refreshProjectsToggle = function () {
+            const allItems = [...document.querySelectorAll(".project-item")];
+            const visibleItems = allItems.filter(
+                item => item.style.display !== "none"
+            );
+
+            // Reset state
+            allItems.forEach(item => item.classList.remove("project-hidden"));
+            projectsSection.classList.remove("project-expanded");
+
+            // Hide button if 3 or fewer
+            if (visibleItems.length <= 3) {
+                toggleBtn.style.display = "none";
+                return;
+            }
+
+            // Collapse to 3
+            visibleItems.forEach((item, index) => {
+                if (index >= 3) item.classList.add("project-hidden");
+            });
+
+            toggleBtn.style.display = "inline-block";
+            toggleBtn.textContent = "View More Projects";
+        };
+
+        toggleBtn.onclick = () => {
+            const expanded = projectsSection.classList.toggle("project-expanded");
+            toggleBtn.textContent = expanded
+                ? "View Less Projects"
+                : "View More Projects";
+
+            if (!expanded) {
+                window.refreshProjectsToggle();
+                projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        };
+
+        // Initial setup
+        window.refreshProjectsToggle();
+
+        /* ===============================
+           PROJECT OVERLAY MODAL
+        ================================ */
         grid.addEventListener("click", e => {
             if (!e.target.classList.contains("overlay-btn")) return;
             e.preventDefault();
@@ -55,19 +104,16 @@ function initProjects() {
 
             thumbnails.innerHTML = "";
 
-            // Main image with SEO-friendly ALT
             mainImg.src = `assets/portfolio/${category}/${slug}/${images[0]}`;
-            mainImg.alt = `${slug} project main view - ${category}`;
+            mainImg.alt = `${slug} project`;
 
             images.forEach((img, i) => {
                 const t = document.createElement("img");
                 t.src = `assets/portfolio/${category}/${slug}/${img}`;
-                t.alt = `${slug} project image ${i + 1} - ${category}`; // ✅ SEO ALT
                 if (i === 0) t.classList.add("active");
 
                 t.onclick = () => {
                     mainImg.src = t.src;
-                    mainImg.alt = t.alt; // Update main image ALT when thumbnail clicked
                     thumbnails.querySelectorAll("img").forEach(x => x.classList.remove("active"));
                     t.classList.add("active");
                 };
@@ -79,12 +125,12 @@ function initProjects() {
         });
 
         closeBtn.onclick = () => modal.style.display = "none";
-        modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-
+        modal.onclick = e => {
+            if (e.target === modal) modal.style.display = "none";
+        };
     });
 }
 
-// 🔑 WAIT until projects.html is injected
 const observer = new MutationObserver(() => {
     if (document.getElementById("projects-grid")) {
         initProjects();
