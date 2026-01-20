@@ -57,3 +57,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'toggleServices') {
+        const grid = document.getElementById('servicesGrid');
+        const servicesSection = document.getElementById('our-services');
+        if (!grid || !servicesSection) return;
+
+        const isExpanded = grid.classList.contains('services-expanded');
+
+        if (isExpanded) {
+            // ✅ STEP 1: Scroll FIRST
+            window.scrollTo({
+                top: servicesSection.offsetTop - 80, // header offset
+                behavior: 'smooth'
+            });
+
+            // ✅ STEP 2: Collapse AFTER scroll starts
+            setTimeout(() => {
+                grid.classList.remove('services-expanded');
+                e.target.textContent = 'View All Services';
+            }, 100); // matches scroll feel
+        } else {
+            // Expand
+            grid.classList.add('services-expanded');
+            e.target.textContent = 'Show Less';
+        }
+    }
+});
