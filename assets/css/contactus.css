@@ -1,5 +1,5 @@
 .contact-section {
-    background: #f7f7f7;
+    background: var(--contact-bg);
 }
 
 .contact-wrapper {
@@ -8,7 +8,7 @@
 }
 
 .contact-info-box {
-    background: #ffffff;
+    background: var(--contact-card-bg);
     border-radius: 14px;
     box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     padding: 28px;
@@ -46,39 +46,36 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.05);
+    background: var(--icon-bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #111;
+    color: var(--icon-color);
     font-size: 18px;
     transition: all 0.3s ease;
 }
 
 .contact-item:hover .contact-icon {
-    background: #111;
-    color: #fff;
+    background: var(--icon-hover-bg);
+    color: var(--icon-hover-color);
 }
 
 .contact-text span {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #777;
+    color: var(--text-secondary-color);
     text-transform: uppercase;
 }
 
 .contact-text p {
     font-size: 0.95rem;
     margin: 4px 0 0;
-    color: #333;
+    color: var(--text-color);
 }
 
-/* ================================
-   RIGHT – FORM
-================================ */
-
+/* Right – Form */
 .contact-form-box {
-    background: #ffffff;
+    background: var(--contact-card-bg);
     border-radius: 14px;
     box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     padding: 40px;
@@ -90,11 +87,10 @@
     font-weight: 600;
 }
 
-/* Inputs */
 .contact-form-box .form-label {
     font-size: 0.85rem;
     font-weight: 500;
-    color: #444;
+    color: var(--text-label-color);
 }
 
 .contact-form-box .form-control,
@@ -107,11 +103,10 @@
 
 .contact-form-box .form-control:focus,
 .contact-form-box .form-select:focus {
-    border-color: #111;
+    border-color: var(--icon-color);
     box-shadow: none;
 }
 
-/* Button */
 .contact-form-box .btn {
     padding: 14px;
     font-weight: 600;
@@ -119,40 +114,14 @@
     border-radius: 8px;
 }
 
-/* Success Message */
 .success-msg {
-    color: #2e7d32;
+    color: var(--success-color);
     font-weight: 500;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 991px) {
-    .map-container {
-        height: 260px;
-    }
-
-    .contact-form-box,
-    .contact-info-box {
-        padding: 28px;
-    }
-}
-
-@media (max-width: 576px) {
-    .contact-form-box {
-        padding: 24px;
-    }
-}
-
 .is-invalid {
-    border-color: #dc3545;
+    border-color: var(--error-color);
 }
-
-/* ================================
-   Social Media
-================================ */
 
 .contact-social {
     display: flex;
@@ -172,7 +141,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--contact-card-bg);
     color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -187,35 +156,35 @@
 
 .contact-social a:hover {
     transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-overlay);
     background: var(--accent-color);
 }
 
 .contact-social a:hover i {
-    color: #ffffff;
+    color: var(--icon-hover-color);
 }
 
 .contact-social a[aria-label="Facebook"] i {
-    color: #1877F2;
+    color: var(--facebook-color);
 }
 
 .contact-social a[aria-label="Instagram"] i {
-    color: #E4405F;
+    color: var(--instagram-color);
 }
 
 .contact-social a[aria-label="LinkedIn"] i {
-    color: #0A66C2;
+    color: var(--linkedin-color);
 }
 
 .contact-social a[aria-label="WhatsApp"] i {
-    color: #25D366;
+    color: var(--whatsapp-color);
 }
 
 .contact-social a[aria-label="Google Business"] i {
-    color: #4285F4;
+    color: var(--google-business-color);
 }
 
-.contact-social a:hover .fa-instagram { color: #fff; }
-.contact-social a:hover .fa-facebook-f { color: #fff; }
-.contact-social a:hover .fa-linkedin-in { color: #fff; }
-.contact-social a:hover .fa-whatsapp { color: #fff; }
+.contact-social a:hover .fa-instagram { color: var(--icon-hover-color); }
+.contact-social a:hover .fa-facebook-f { color: var(--icon-hover-color); }
+.contact-social a:hover .fa-linkedin-in { color: var(--icon-hover-color); }
+.contact-social a:hover .fa-whatsapp { color: var(--icon-hover-color); }

@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #f7f7f7;
-    color: #1a1a1a;
+    background-color: var(--contact-bg);
+    color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 
 /* Main Container */
 .container {
-    background: #ffffff;
+    background: var(--contact-card-bg);
     width: 100%;
     max-width: 1100px;
     padding: 40px;
@@ -61,12 +61,14 @@ header h1 {
 .flex-right h1 {
     font-size: 32px;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .flex-right p {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 /* Footer */
@@ -74,21 +76,5 @@ footer {
     margin-top: 40px;
     text-align: center;
     font-size: 14px;
-    color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .flex-right h1 {
-        font-size: 28px;
-    }
-
-    .maintenance-gif {
-        width: 70%;
-    }
+    color: var(--text-secondary-color);
 }

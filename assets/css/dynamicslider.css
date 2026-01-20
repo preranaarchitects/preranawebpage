@@ -1,4 +1,4 @@
-
+/* Hero Section */
 .hero {
     min-height: 85vh;
     position: relative;
@@ -26,10 +26,10 @@
 .hero-content h1,
 .hero-content p {
     text-shadow:
-            -1px -1px 1px rgba(16,24,40,0.08),
-            1px -1px 1px rgba(16,24,40,0.08),
-            -1px  1px 1px rgba(16,24,40,0.08),
-            1px  1px 1px rgba(16,24,40,0.08);
+            -1px -1px 1px var(--hero-shadow),
+            1px -1px 1px var(--hero-shadow),
+            -1px  1px 1px var(--hero-shadow),
+            1px  1px 1px var(--hero-shadow);
 }
 
 .hero-slider {

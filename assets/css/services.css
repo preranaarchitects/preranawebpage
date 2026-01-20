@@ -1,8 +1,8 @@
 .service-card {
-    background: #ffffff;
+    background: var(--contact-card-bg);
     border-radius: 14px;
     padding: 28px 22px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow);
     transition:
             transform 0.35s ease,
             box-shadow 0.35s ease,
@@ -31,15 +31,15 @@
 /* POP + HIGHLIGHT on hover */
 .service-card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: var(--secondary-color);
-    background: #fffdf9;
+    box-shadow: var(--shadow-overlay);
+    background: var(--service-card-hover-bg);
 }
 
+/* Hover glow layer */
 .service-card:hover::before {
     opacity: 1;
 }
 
-/* keep text above glow */
 .service-card h3,
 .service-card p {
     position: relative;
@@ -47,13 +47,12 @@
     transition: color 0.3s ease;
 }
 
-/* text color enhancement */
 .service-card:hover h3 {
     color: var(--accent-color);
 }
 
 .service-card:hover p {
-    color: #444;
+    color: var(--text-label-color);
 }
 
 .service-hidden {

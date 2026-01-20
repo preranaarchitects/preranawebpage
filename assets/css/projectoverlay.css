@@ -12,12 +12,12 @@
     top: 15px;
     right: 25px;
     font-size: 35px;
-    color: white;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
 .project-modal-close:hover {
-    color: #dcae63;
+    color: var(--accent-color);
 }
 
 .project-modal-content {
@@ -50,16 +50,14 @@
 }
 
 .project-modal-thumbnails img.active {
-    border-color: #dcae63;
+    border-color: var(--accent-color);
 }
 
-
-/**/
-
+/* Project Image Wrapper */
 .project-image-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .project-img {
@@ -80,12 +78,12 @@
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    color: #fff; /* white text over image */
+    color: var(--secondary-color);
     font-weight: 500;
     font-size: 0.85rem;
     text-decoration: none;
-    opacity: 0; /* hidden initially */
-    transition: none; /* appear instantly */
+    opacity: 0;
+    transition: none;
 }
 
 /* Show button instantly on hover */
@@ -96,5 +94,5 @@
 /* Optional hover effect on text */
 .overlay-btn:hover {
     text-decoration: none;
-    color: #dcae63; /* subtle accent on hover */
+    color: var(--accent-color);
 }
