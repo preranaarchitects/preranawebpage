@@ -14,13 +14,14 @@
 
     <!-- Filter Buttons -->
     <div class="text-center mb-4">
-      <div class="btn-group" role="group" aria-label="Filter projects" id="project-filters">
-        <button class="btn btn-outline-secondary active" data-filter="*">All</button>
-        <button class="btn btn-outline-secondary" data-filter="villa">Villas</button>
-        <button class="btn btn-outline-secondary" data-filter="apartment">Apartments</button>
-        <button class="btn btn-outline-secondary" data-filter="commercial">Commercial</button>
+      <div class="project-filter-tabs" id="project-filters" role="group" aria-label="Filter projects">
+        <button class="filter-btn btn btn-warning active" data-filter="*">All</button>
+        <button class="filter-btn btn btn-warning" data-filter="villa">Villas</button>
+        <button class="filter-btn btn btn-warning" data-filter="apartment">Apartments</button>
+        <button class="filter-btn btn btn-warning" data-filter="commercial">Commercials</button>
       </div>
     </div>
+
 
     <!-- Project Grid (cards injected via JS) -->
     <div class="row g-4" id="projects-grid"></div>
