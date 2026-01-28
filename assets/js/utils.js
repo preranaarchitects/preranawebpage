@@ -1,3 +1,10 @@
+function setFooterYear() {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // Function to attach reload to logo
     function attachLogoReload() {
@@ -16,9 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Footer year
-    const yearEl = document.getElementById('year');
-    if(yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Contact form submission
     const form = document.getElementById('contactForm');
@@ -85,3 +89,19 @@ document.addEventListener('click', function (e) {
         }
     }
 });
+
+const footerObserver = new MutationObserver(() => {
+    const yearEl = document.getElementById('year');
+    if (yearEl && !yearEl.textContent) {
+        yearEl.textContent = new Date().getFullYear();
+        footerObserver.disconnect(); // run once
+    }
+});
+
+footerObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+
+window.addEventListener('load', setFooterYear);
