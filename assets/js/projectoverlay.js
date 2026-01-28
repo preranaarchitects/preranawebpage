@@ -31,13 +31,13 @@ function initProjects() {
                         <div class="project-image-wrapper position-relative">
                             <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
                                  class="img-fluid project-img"
-                                 alt="${project.name}">
-                            <a href="#" class="overlay-btn">View More Projects</a>
+                                 alt="${project.name}"/>
+                            <a href="#" class="overlay-btn">Explore Project</a>
+                            <div class="project-overlay">
+                                <h5 class="card-title">${project.name}</h5>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">${project.name}</h5>
-                            <p class="card-text small text-muted">${project.description}</p>
-                        </div>
+                        
                     </div>
                 `;
 
@@ -45,9 +45,6 @@ function initProjects() {
             });
         });
 
-        /* ===============================
-           SHOW MORE / SHOW LESS LOGIC
-        ================================ */
         window.refreshProjectsToggle = function () {
             const allItems = [...document.querySelectorAll(".project-item")];
             const visibleItems = allItems.filter(
@@ -88,9 +85,7 @@ function initProjects() {
         // Initial setup
         window.refreshProjectsToggle();
 
-        /* ===============================
-           PROJECT OVERLAY MODAL
-        ================================ */
+
         grid.addEventListener("click", e => {
             if (!e.target.classList.contains("overlay-btn")) return;
             e.preventDefault();
