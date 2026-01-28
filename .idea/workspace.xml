@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65eb3ad8-16bb-45ac-873d-31fd865ac8a7" name="Changes" comment="Fixed the contact us form git issue">
+    <list default="true" id="65eb3ad8-16bb-45ac-873d-31fd865ac8a7" name="Changes" comment="Upgraded the project images and upgraded to live projects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sendcontactform.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sendcontactform.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,17 +15,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="38b9dhfRQ5RnwZQWtnL44Ntnryq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "Webpage-Phase1",
     "javascript.preferred.runtime.type.id": "node",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Fixed the contact us form git issue">
       <option name="closed" value="true" />
@@ -36,11 +55,42 @@
       <option name="project" value="LOCAL" />
       <updated>1765924763837</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update the css file with common :root">
+      <option name="closed" value="true" />
+      <created>1768937828475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1768937828475</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65eb3ad8-16bb-45ac-873d-31fd865ac8a7" name="Changes" comment="Update the css file with common :root" />
+      <created>1769057501857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769057501857</updated>
+      <workItem from="1769057504068" duration="4236000" />
+      <workItem from="1769072039695" duration="9413000" />
+      <workItem from="1769598429593" duration="9780000" />
+    </task>
+    <task id="LOCAL-00003" summary="Upgraded the project images and upgraded to live projects">
+      <option name="closed" value="true" />
+      <created>1769611379634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769611379634</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed the contact us form git issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the contact us form git issue" />
+    <MESSAGE value="Update the css file with common :root" />
+    <MESSAGE value="Upgraded the project images and upgraded to live projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded the project images and upgraded to live projects" />
   </component>
 </project>
