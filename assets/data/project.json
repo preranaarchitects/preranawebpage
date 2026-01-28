@@ -1,40 +1,32 @@
 {
-  "villa": [
+  "construction": [
     {
-      "name": "Spanner Way",
-      "slug": "spannerway",
-      "description": "Luxury independent villa project"
+      "name": "Cluster Villa",
+      "slug": "sudarshan-sathnur",
+      "description": ""
     },
     {
-      "name": "Green Meadows",
-      "slug": "greenmeadows",
-      "description": "Premium villas surrounded by greenery"
+      "name": "Luxury Villa",
+      "slug": "gautham-shivmogga",
+      "description": ""
+    },
+    {
+      "name": "Farmhouse",
+      "slug": "srinivas-vijipura",
+      "description": ""
     }
   ],
 
-  "apartment": [
+  "interior": [
     {
-      "name": "Prerana Residency",
-      "slug": "prerana",
-      "description": "Modern apartment living"
+      "name": "Contemporary",
+      "slug": "sudarshan-sathnur",
+      "description": ""
     },
     {
-      "name": "Sai Krupa",
-      "slug": "saikrupa",
-      "description": "Comfortable urban apartments"
-    }
-  ],
-
-  "commercial": [
-    {
-      "name": "High View Plaza",
-      "slug": "highview",
-      "description": "Premium commercial space"
-    },
-    {
-      "name": "Business Hub",
-      "slug": "businesshub",
-      "description": "Modern commercial complex"
+      "name": "Minimalist",
+      "slug": "ashitosh-vidyaranyapura",
+      "description": ""
     }
   ]
 }

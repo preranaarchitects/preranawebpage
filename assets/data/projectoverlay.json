@@ -1,35 +1,48 @@
 {
-  "villa": {
-    "spannerway": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+  "construction": {
+    "sudarshan-sathnur": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg"
     ],
-    "greenmeadows": [
-      "img1.jpg",
-      "img2.jpg"
+    "gautham-shivmogga": [
+      "1.jpg",
+      "2.jpg"
+    ],
+    "srinivas-vijipura": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
     ]
   },
 
-  "apartment": {
-    "prerana": [
-      "img1.jpg",
-      "img2.jpg"
+  "interior": {
+    "sudarshan-sathnur": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg",
+      "10.jpg",
+      "11.jpg"
     ],
-    "saikrupa": [
-      "img1.jpg"
-    ]
-  },
-
-  "commercial": {
-    "highview": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
-    ],
-    "businesshub": [
-      "img1.jpg",
-      "img2.jpg"
+    "ashitosh-vidyaranyapura": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
     ]
   }
 }
