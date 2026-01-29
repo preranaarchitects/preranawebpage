@@ -1,7 +1,7 @@
-const EMAILJS_USER_ID = 'bf7Dsy4ovPLzM6CHc';
-const EMAILJS_SERVICE_ID = 'service_d8nsbz9';
-const ADMIN_TEMPLATE_ID = 'template_jr8qf8h';
-const CUSTOMER_TEMPLATE_ID = 'template_hkzges3';
+const EMAILJS_USER_ID = 'Ok9Mhch6FJaqw6fMf';
+const EMAILJS_SERVICE_ID = 'service_7m5fmfg';
+const ADMIN_TEMPLATE_ID = 'template_d844iwq';
+const CUSTOMER_TEMPLATE_ID = 'template_yfn1y8r';
 
 // Init EmailJS
 emailjs.init(EMAILJS_USER_ID);
