@@ -15,11 +15,16 @@ function initProjects() {
         fetch("../assets/data/projectoverlay.json").then(r => r.json())
     ]).then(([projectData, overlayData]) => {
 
+        const categoryCounts = {};
         let totalProjects = 0;
 
         Object.entries(projectData).forEach(([category, projects]) => {
+            categoryCounts[category] = projects.length;
+            totalProjects += projects.length;
+        });
+
+        Object.entries(projectData).forEach(([category, projects]) => {
             projects.forEach(project => {
-                totalProjects++;
 
                 const col = document.createElement("div");
                 col.className = "col-sm-6 col-md-4 project-item";
@@ -31,18 +36,32 @@ function initProjects() {
                         <div class="project-image-wrapper position-relative">
                             <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
                                  class="img-fluid project-img"
-                                 alt="${project.name}"/>
+                                 alt="${project.name}" />
                             <a href="#" class="overlay-btn">Explore Project</a>
                             <div class="project-overlay">
                                 <h5 class="card-title">${project.name}</h5>
                             </div>
                         </div>
-                        
                     </div>
                 `;
 
                 grid.appendChild(col);
             });
+        });
+
+        const filterButtons = document.querySelectorAll("#project-filters button");
+
+        filterButtons.forEach(btn => {
+            const filter = btn.dataset.filter;
+            const bubble = btn.querySelector(".count-bubble");
+
+            if (!bubble) return;
+
+            if (filter === "*") {
+                bubble.textContent = totalProjects;
+            } else {
+                bubble.textContent = categoryCounts[filter] || 0;
+            }
         });
 
         window.refreshProjectsToggle = function () {
@@ -51,7 +70,7 @@ function initProjects() {
                 item => item.style.display !== "none"
             );
 
-            // Reset state
+            // Reset
             allItems.forEach(item => item.classList.remove("project-hidden"));
             projectsSection.classList.remove("project-expanded");
 
@@ -61,7 +80,7 @@ function initProjects() {
                 return;
             }
 
-            // Collapse to 3
+            // Show only first 3
             visibleItems.forEach((item, index) => {
                 if (index >= 3) item.classList.add("project-hidden");
             });
@@ -72,6 +91,7 @@ function initProjects() {
 
         toggleBtn.onclick = () => {
             const expanded = projectsSection.classList.toggle("project-expanded");
+
             toggleBtn.textContent = expanded
                 ? "View Less Projects"
                 : "View More Projects";
@@ -82,9 +102,8 @@ function initProjects() {
             }
         };
 
-        // Initial setup
+        // Initial collapse
         window.refreshProjectsToggle();
-
 
         grid.addEventListener("click", e => {
             if (!e.target.classList.contains("overlay-btn")) return;

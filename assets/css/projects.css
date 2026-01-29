@@ -61,30 +61,40 @@
     padding: 8px;
     border-radius: 50px;
     max-width: 600px;
+
     margin: 0 auto;
 }
 
 .filter-btn {
-    flex: 1;
+    flex: 1 1 auto;
     border: none;
     background: transparent;
-    padding: 10px 18px;
-    border-radius: 40px;
+    padding: 0.7em 1.2em;
+    border-radius: 999px;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--text-secondary-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            transform 0.2s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    line-height: 1.2;
 }
 
-/* Hover */
+
+
 .filter-btn:hover {
     background: var(--icon-bg-light);
     color: var(--primary-color);
 }
 
-/* Active State */
+
 .filter-btn.active {
     background: var(--accent-color);
     color: var(--secondary-color);
@@ -107,3 +117,17 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+.count-bubble {
+    background: rgba(0, 0, 0, 0.40);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    font-size: 0.75em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
