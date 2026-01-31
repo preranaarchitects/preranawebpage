@@ -31,7 +31,6 @@
     font-size: 1rem;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .about-editorial {
         flex-direction: column;
@@ -67,7 +66,6 @@
     overflow: hidden;
 }
 
-/* glow layer like services */
 #about-us .card::before {
     content: "";
     position: absolute;
@@ -83,19 +81,16 @@
     z-index: 0;
 }
 
-/* POP on hover */
 #about-us .card:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: var(--shadow-overlay);
     background: var(--service-card-hover-bg);
 }
 
-/* glow visible */
 #about-us .card:hover::before {
     opacity: 1;
 }
 
-/* text layering */
 #about-us .card h5,
 #about-us .card p,
 #about-us .card div {
@@ -103,8 +98,5 @@
     z-index: 1;
 }
 
-/* accent title on hover */
-#about-us .card:hover h5 {
-    color: var(--accent-color);
-}
+
 
