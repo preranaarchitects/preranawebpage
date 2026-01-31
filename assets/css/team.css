@@ -1,0 +1,105 @@
+.team-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+.team-track {
+    display: flex;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding: 1rem 0;
+    justify-content: flex-start;
+}
+
+
+.team-track::-webkit-scrollbar {
+    display: none;
+}
+
+.team-card {
+    min-width: 20rem;
+    height: 22rem;
+    background: var(--contact-card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.team-card:hover {
+    transform: translateY(-0.6rem) scale(1.03);
+    box-shadow: var(--shadow-overlay);
+    background: var(--service-card-hover-bg);
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+.team-photo {
+    width: 11rem;
+    height: 11rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow-light);
+}
+
+.team-card h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
+.team-role {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.team-domain {
+    font-size: 0.95rem;
+    color: var(--text-secondary-color);
+    line-height: 1.4;
+}
+
+.team-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: background 0.3s ease;
+}
+
+.team-nav:hover {
+    background: var(--accent-color);
+    color: var(--icon-hover-color);
+}
+
+.team-prev {
+    left: -0.9rem;
+}
+
+.team-next {
+    right: -0.9rem;
+}
