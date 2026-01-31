@@ -25,6 +25,15 @@ function initContactForm(container) {
         if (isSubmitting) return;
         isSubmitting = true;
 
+        const submitBtn = form.querySelector('#submitBtn');
+        const btnText = form.querySelector('#btnText');
+        const loader = form.querySelector('#loader');
+
+        submitBtn.disabled = true;
+        btnText.textContent = "Submitting Request...";
+        loader.classList.remove("d-none");
+
+
         const now = new Date();
 
         const commonParams = {
@@ -94,6 +103,9 @@ function initContactForm(container) {
             })
             .finally(() => {
                 isSubmitting = false;
+                submitBtn.disabled = false;
+                btnText.textContent = "Request Consultation";
+                loader.classList.add("d-none");
             });
     });
 }
