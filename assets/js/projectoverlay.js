@@ -2,6 +2,7 @@ function initProjects() {
     const grid = document.getElementById("projects-grid");
     const toggleBtn = document.getElementById("toggleProjectsBtn");
     const projectsSection = document.getElementById("projects");
+    const projectExpandedThreshold = 9;
 
     if (!grid || !toggleBtn || !projectsSection) return;
 
@@ -74,15 +75,15 @@ function initProjects() {
             allItems.forEach(item => item.classList.remove("project-hidden"));
             projectsSection.classList.remove("project-expanded");
 
-            // Hide button if 3 or fewer
-            if (visibleItems.length <= 3) {
+            // Hide button if projectExpandedThreshold or fewer
+            if (visibleItems.length <= projectExpandedThreshold) {
                 toggleBtn.style.display = "none";
                 return;
             }
 
-            // Show only first 3
+            // Show only first projectExpandedThreshold
             visibleItems.forEach((item, index) => {
-                if (index >= 3) item.classList.add("project-hidden");
+                if (index >= projectExpandedThreshold) item.classList.add("project-hidden");
             });
 
             toggleBtn.style.display = "inline-block";
