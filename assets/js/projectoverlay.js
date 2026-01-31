@@ -2,6 +2,7 @@ function initProjects() {
 
     const grid = document.getElementById("projects-grid");
     const projectsSection = document.getElementById("projects");
+    const projectExpandedThreshold = 9;
 
     if (!grid || !projectsSection) return;
 
@@ -77,10 +78,16 @@ function initProjects() {
 
         filterButtons.forEach(btn => {
 
-            btn.addEventListener("click", () => {
+            // Hide button if projectExpandedThreshold or fewer
+            if (visibleItems.length <= projectExpandedThreshold) {
+                toggleBtn.style.display = "none";
+                return;
+            }
 
-                filterButtons.forEach(b => b.classList.remove("active"));
-                btn.classList.add("active");
+            // Show only first projectExpandedThreshold
+            visibleItems.forEach((item, index) => {
+                if (index >= projectExpandedThreshold) item.classList.add("project-hidden");
+            });
 
                 const filter = btn.dataset.filter;
 
