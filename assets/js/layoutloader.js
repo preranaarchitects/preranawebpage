@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
             meta: "Learn about Prerana Architects, an experienced architecture and interior firm in Bangalore."
         },
         {
+            id: "our-team",
+            title: "Meet Our Team | Expert Architects & Designers in Bangalore",
+            meta: "Meet the experienced team of architects, interior designers, and construction professionals at Prerana Architects Bangalore."
+        },
+        {
             id: "contact-us",
             title: "Contact Prerana Architects | Architectural Services Bangalore",
             meta: "Contact Prerana Architects Bangalore for architecture, interior and construction services."
@@ -111,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initProjectFilters(container);
     });
     loadSection("about-us");
+    loadSection("our-team")
     loadSection("contact-us", (container) => {
         initContactForm(container); // Initialize EmailJS form after HTML is loaded
     });
