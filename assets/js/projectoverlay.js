@@ -1,10 +1,10 @@
 function initProjects() {
+
     const grid = document.getElementById("projects-grid");
-    const toggleBtn = document.getElementById("toggleProjectsBtn");
     const projectsSection = document.getElementById("projects");
     const projectExpandedThreshold = 9;
 
-    if (!grid || !toggleBtn || !projectsSection) return;
+    if (!grid || !projectsSection) return;
 
     const modal = document.getElementById("project-modal");
     const mainImg = document.getElementById("project-modal-main-img");
@@ -19,12 +19,15 @@ function initProjects() {
         const categoryCounts = {};
         let totalProjects = 0;
 
+        // Count projects
         Object.entries(projectData).forEach(([category, projects]) => {
             categoryCounts[category] = projects.length;
             totalProjects += projects.length;
         });
 
+        // Create project cards (ALL visible)
         Object.entries(projectData).forEach(([category, projects]) => {
+
             projects.forEach(project => {
 
                 const col = document.createElement("div");
@@ -38,7 +41,9 @@ function initProjects() {
                             <img src="assets/portfolio/${category}/${project.slug}/banner.jpg"
                                  class="img-fluid project-img"
                                  alt="${project.name}" />
+
                             <a href="#" class="overlay-btn">Explore Project</a>
+
                             <div class="project-overlay">
                                 <h5 class="card-title">${project.name}</h5>
                             </div>
@@ -50,9 +55,11 @@ function initProjects() {
             });
         });
 
+        // Update filter count bubbles
         const filterButtons = document.querySelectorAll("#project-filters button");
 
         filterButtons.forEach(btn => {
+
             const filter = btn.dataset.filter;
             const bubble = btn.querySelector(".count-bubble");
 
@@ -65,15 +72,11 @@ function initProjects() {
             }
         });
 
-        window.refreshProjectsToggle = function () {
-            const allItems = [...document.querySelectorAll(".project-item")];
-            const visibleItems = allItems.filter(
-                item => item.style.display !== "none"
-            );
+        // -----------------------------
+        // FILTER FUNCTIONALITY
+        // -----------------------------
 
-            // Reset
-            allItems.forEach(item => item.classList.remove("project-hidden"));
-            projectsSection.classList.remove("project-expanded");
+        filterButtons.forEach(btn => {
 
             // Hide button if projectExpandedThreshold or fewer
             if (visibleItems.length <= projectExpandedThreshold) {
@@ -86,28 +89,29 @@ function initProjects() {
                 if (index >= projectExpandedThreshold) item.classList.add("project-hidden");
             });
 
-            toggleBtn.style.display = "inline-block";
-            toggleBtn.textContent = "View More Projects";
-        };
+                const filter = btn.dataset.filter;
 
-        toggleBtn.onclick = () => {
-            const expanded = projectsSection.classList.toggle("project-expanded");
+                document.querySelectorAll(".project-item").forEach(item => {
 
-            toggleBtn.textContent = expanded
-                ? "View Less Projects"
-                : "View More Projects";
+                    if (filter === "*" || item.dataset.category === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
 
-            if (!expanded) {
-                window.refreshProjectsToggle();
-                projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        };
+                });
+            });
 
-        // Initial collapse
-        window.refreshProjectsToggle();
+        });
+
+        // -----------------------------
+        // OVERLAY MODAL FUNCTIONALITY
+        // -----------------------------
 
         grid.addEventListener("click", e => {
+
             if (!e.target.classList.contains("overlay-btn")) return;
+
             e.preventDefault();
 
             const card = e.target.closest(".project-item");
@@ -122,35 +126,47 @@ function initProjects() {
             mainImg.src = `assets/portfolio/${category}/${slug}/${images[0]}`;
             mainImg.alt = `${slug} project`;
 
-            images.forEach((img, i) => {
-                const t = document.createElement("img");
-                t.src = `assets/portfolio/${category}/${slug}/${img}`;
-                if (i === 0) t.classList.add("active");
+            images.forEach((img, index) => {
 
-                t.onclick = () => {
-                    mainImg.src = t.src;
-                    thumbnails.querySelectorAll("img").forEach(x => x.classList.remove("active"));
-                    t.classList.add("active");
+                const thumb = document.createElement("img");
+                thumb.src = `assets/portfolio/${category}/${slug}/${img}`;
+
+                if (index === 0) thumb.classList.add("active");
+
+                thumb.onclick = () => {
+                    mainImg.src = thumb.src;
+
+                    thumbnails.querySelectorAll("img")
+                        .forEach(x => x.classList.remove("active"));
+
+                    thumb.classList.add("active");
                 };
 
-                thumbnails.appendChild(t);
+                thumbnails.appendChild(thumb);
             });
 
             modal.style.display = "block";
+
         });
 
         closeBtn.onclick = () => modal.style.display = "none";
+
         modal.onclick = e => {
             if (e.target === modal) modal.style.display = "none";
         };
+
     });
+
 }
 
+// Observe dynamic load
 const observer = new MutationObserver(() => {
+
     if (document.getElementById("projects-grid")) {
         initProjects();
         observer.disconnect();
     }
+
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
