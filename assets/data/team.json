@@ -4,5 +4,17 @@
     "fullname": "Prerana R",
     "designation": "Founder & Principal Architect",
     "role": "Design & Project Leadership"
+  },
+  {
+    "image": "assets/images/team/akash-g.jpg",
+    "fullname": "Akash G",
+    "designation": "Project Manager & Senior Contractor",
+    "role": "Project Delivery"
+  },
+  {
+    "image": "assets/images/team/karan-s.jpg",
+    "fullname": "Karan S",
+    "designation": "Principal Structural Engineer",
+    "role": "Structural Design Management"
   }
 ]
