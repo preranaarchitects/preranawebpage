@@ -8,13 +8,25 @@
   {
     "image": "assets/images/team/akash-g.jpg",
     "fullname": "Akash GA",
-    "designation": "Project Manager & Senior Contractor",
-    "role": "Project Delivery"
+    "designation": "Senior Project Director",
+    "role": "Head of Construction"
   },
   {
     "image": "assets/images/team/karan-s.jpg",
     "fullname": "Karan K",
-    "designation": "Principal Structural Engineer",
-    "role": "Structural Design Management"
+    "designation": "Principal Design Engineer",
+    "role": "Head of Design & Planning"
+  },
+  {
+    "image": "assets/images/team/tushar-tr.jpg",
+    "fullname": "Tushar Kumar TR",
+    "designation": "Project Engineer",
+    "role": "Project Planning & Control"
+  },
+  {
+    "image": "assets/images/team/prathyush-k.jpg",
+    "fullname": "Prathyush K",
+    "designation": "Site Engineer",
+    "role": "Site Execution & Supervision"
   }
 ]
