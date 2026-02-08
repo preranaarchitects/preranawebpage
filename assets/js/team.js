@@ -1,6 +1,5 @@
 let autoScrollInterval = null;
-
-async function loadTeamData() {
+async function loadTeamData(container = document) {
 
     const response = await fetch("../assets/data/team.json");
     const teamData = await response.json();
