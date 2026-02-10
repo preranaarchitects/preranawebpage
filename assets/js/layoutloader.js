@@ -111,12 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
     loadSection("hero", (container) => {
         initHeroSlider(container);
     });
-    loadSection("our-services");
+    loadSection("our-services", () => {
+        loadServiceData();
+    });
     loadSection("our-projects", (container) => {
         initProjectFilters(container);
     });
     loadSection("about-us");
-    loadSection("our-team")
+    loadSection("our-team", () => {
+        loadTeamData();
+    });
     loadSection("contact-us", (container) => {
         initContactForm(container); // Initialize EmailJS form after HTML is loaded
     });

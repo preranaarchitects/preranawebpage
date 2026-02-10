@@ -85,7 +85,7 @@ function setupSliderBehavior() {
 
 
 // Load on page start
-document.addEventListener("DOMContentLoaded", loadTeamData);
+//document.addEventListener("DOMContentLoaded", loadTeamData);
 
 // Recheck on window resize
 window.addEventListener("resize", setupSliderBehavior);
