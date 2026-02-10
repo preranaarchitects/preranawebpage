@@ -1,6 +1,5 @@
 let autoScrollInterval = null;
-
-async function loadTeamData() {
+async function loadTeamData(container = document) {
 
     const response = await fetch("../assets/data/team.json");
     const teamData = await response.json();
@@ -86,7 +85,7 @@ function setupSliderBehavior() {
 
 
 // Load on page start
-document.addEventListener("DOMContentLoaded", loadTeamData);
+//document.addEventListener("DOMContentLoaded", loadTeamData);
 
 // Recheck on window resize
 window.addEventListener("resize", setupSliderBehavior);

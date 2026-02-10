@@ -76,4 +76,4 @@ function setupToggleButton() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", loadServiceData);
+//document.addEventListener("DOMContentLoaded", loadServiceData);
