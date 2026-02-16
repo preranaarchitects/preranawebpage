@@ -4,62 +4,71 @@
     "imagealt": "Construction and project execution services by Prerana Architects",
     "servicename": "Construction & Project Execution",
     "servicedescription": "End-to-end construction management for villas, apartments, and commercial projects — on schedule and within budget.",
-    "servicenavigation": "Get consultation"
+    "servicenavigation": "Get consultation",
+    "hrefurl": "contact-us"
   },
   {
     "imagesrc": "assets/images/services/service2.png",
     "imagealt": "Architectural design and master planning services",
     "servicename": "Architecture & Master Planning",
     "servicedescription": "Modern, sustainable, and site-responsive architectural design — from concept to execution.",
-    "servicenavigation": "See portfolio"
+    "servicenavigation": "See portfolio",
+    "hrefurl": "our-team"
   },
   {
     "imagesrc": "assets/images/services/service3.png",
     "imagealt": "Interior design and turnkey fit-out services",
     "servicename": "Interior Design & Fit-Out",
     "servicedescription": "Bespoke interiors, furniture coordination, lighting design, and turnkey fit-out solutions.",
-    "servicenavigation": "Request quote"
+    "servicenavigation": "Request quote",
+    "hrefurl": "contact-us"
   },
   {
     "imagesrc": "assets/images/services/service4.png",
     "imagealt": "Renovation and remodeling services for residential and commercial spaces",
     "servicename": "Renovation & Remodeling",
     "servicedescription": "Transform existing spaces with expert remodeling, structural improvements, and modern finishes.",
-    "servicenavigation": "Get started"
+    "servicenavigation": "Get started",
+    "hrefurl": "contact-us"
   },
   {
     "imagesrc": "assets/images/services/service5.png",
     "imagealt": "Urban planning and site development consulting services",
     "servicename": "Urban Planning & Site Development",
     "servicedescription": "Strategic planning for residential and commercial sites, infrastructure layouts, and zoning compliance.",
-    "servicenavigation": "Learn more"
+    "servicenavigation": "Learn more",
+    "hrefurl": "our-projects"
   },
   {
     "imagesrc": "assets/images/services/service6.png",
     "imagealt": "3D architectural design and visualization services",
     "servicename": "3D Design & Visualization",
     "servicedescription": "Realistic 3D plans and renderings to help clients visualize spaces before construction begins.",
-    "servicenavigation": "View examples"
+    "servicenavigation": "View examples",
+    "hrefurl": "our-projects"
   },
   {
     "imagesrc": "assets/images/services/service7.png",
     "imagealt": "Architectural and construction consultation services",
     "servicename": "Consultation & Advisory",
     "servicedescription": "Expert guidance on design, construction planning, materials, and sustainable solutions tailored to your project.",
-    "servicenavigation": "Book a consultation"
+    "servicenavigation": "Book a consultation",
+    "hrefurl": "contact-us"
   },
   {
     "imagesrc": "assets/images/services/service8.png",
     "imagealt": "Sustainable architecture and green building design services",
     "servicename": "Sustainable Design & Green Building",
     "servicedescription": "Eco-friendly architecture, energy-efficient solutions, and environmentally responsible building practices.",
-    "servicenavigation": "Explore solutions"
+    "servicenavigation": "Explore solutions",
+    "hrefurl": "about-us"
   },
   {
     "imagesrc": "assets/images/services/service9.png",
     "imagealt": "Turnkey architectural and construction project solutions",
     "servicename": "Turnkey Project Solutions",
     "servicedescription": "Complete end-to-end project delivery, from initial concept and design to final construction handover.",
-    "servicenavigation": "Start your project"
+    "servicenavigation": "Start your project",
+    "hrefurl": "contact-us"
   }
 ]
