@@ -216,3 +216,17 @@ header .container-fluid {
     height: 1px;
     overflow: hidden;
 }
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.brand-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+}
