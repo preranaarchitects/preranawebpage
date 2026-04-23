@@ -1,78 +1,66 @@
 async function loadServiceData() {
+    try {
+        const response = await fetch("assets/data/service.json");
+        if (!response.ok) throw new Error("Service data not found");
 
-    const response = await fetch("../assets/data/service.json");
-    const serviceData = await response.json();
+        const services = await response.json();
+        const grid = document.getElementById("servicesGrid");
+        if (!grid) return;
 
-    const grid = document.getElementById("servicesGrid");
-    if (!grid) return;
+        grid.innerHTML = "";
 
-    grid.innerHTML = "";
+        services.forEach((service, index) => {
+            const col = document.createElement("div");
+            col.className = "col-lg-4 col-md-6";
 
-    serviceData.forEach((member, index) => {
+            if (index >= 3) col.classList.add("service-hidden");
 
-        const cardWrapper = document.createElement("div");
-        cardWrapper.className = "col-md-4";
+            col.innerHTML = `
+                <article class="service-card h-100">
+                    <h5 class="fw-bold d-flex align-items-center mb-3">
+                        <img class="me-2 service-icon-size"
+                             src="${service.imagesrc}"
+                             alt="${service.imagealt}"
+                             loading="lazy">
+                        ${service.servicename}
+                    </h5>
+                    <p class="text-muted small">
+                        ${service.servicedescription}
+                    </p>
+                    <a href="#${service.hrefurl}"
+                       class="text-warning text-decoration-none fw-semibold">
+                       ${service.servicenavigation} →
+                    </a>
+                </article>
+            `;
 
-        // 👉 Hide cards after 3
-        if (index >= 3) {
-            cardWrapper.classList.add("service-hidden");
-        }
+            grid.appendChild(col);
+        });
 
-        cardWrapper.innerHTML = `
-            <div class="service-card p-4 h-100 position-relative">
-                <h5 class="fw-bold d-flex align-items-center mb-3">
-                    <img class="me-2 service-icon-size"
-                         src="${member.imagesrc}"
-                         alt="${member.imagealt}">
-                    ${member.servicename}
-                </h5>
-                <p class="text-muted small">
-                    ${member.servicedescription}
-                </p>
-                <a href="#contact-us" 
-                   class="text-warning text-decoration-none d-inline-block mt-2">
-                   ${member.servicenavigation} →
-                </a>
-            </div>
-        `;
+        setupToggleButton();
 
-        grid.appendChild(cardWrapper);
-    });
-
-    setupToggleButton();
+    } catch (error) {
+        console.error("Error loading services:", error);
+    }
 }
 
 function setupToggleButton() {
-
     const button = document.getElementById("toggleServices");
     const grid = document.getElementById("servicesGrid");
 
     if (!button || !grid) return;
 
     button.addEventListener("click", () => {
+        const hidden = grid.querySelectorAll(".service-hidden");
+        const expanded = grid.classList.toggle("services-expanded");
 
-        const hiddenCards = grid.querySelectorAll(".service-hidden");
+        hidden.forEach(card => {
+            card.style.display = expanded ? "block" : "none";
+        });
 
-        const isExpanded = grid.classList.contains("services-expanded");
-
-        if (isExpanded) {
-            // 🔽 SHOW LESS
-            hiddenCards.forEach(card => card.style.display = "none");
-
-            grid.classList.remove("services-expanded");
-            button.textContent = "View All Services";
-
-            // optional smooth scroll back
-            document.getElementById("services")
-                .scrollIntoView({ behavior: "smooth" });
-
-        } else {
-            // 🔼 SHOW MORE
-            hiddenCards.forEach(card => card.style.display = "block");
-
-            grid.classList.add("services-expanded");
-            button.textContent = "Show Less Services";
-        }
+        button.textContent = expanded
+            ? "Show Less Services"
+            : "View All Services";
     });
 }
 

@@ -36,7 +36,6 @@
 .team-card:hover {
     transform: translateY(-0.6rem) scale(1.03);
     box-shadow: var(--shadow-overlay);
-    background: var(--service-card-hover-bg);
 }
 
 .team-card:hover::before {
@@ -102,3 +101,4 @@
 .team-next {
     right: -0.9rem;
 }
+

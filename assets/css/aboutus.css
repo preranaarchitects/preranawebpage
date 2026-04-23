@@ -1,3 +1,6 @@
+/* About Us Section Styles */
+
+/* Tagline */
 .about-tagline {
     font-size: 1.1rem;
     font-weight: 600;
@@ -5,6 +8,7 @@
     letter-spacing: 0.05rem;
 }
 
+/* Editorial Layout */
 .about-editorial {
     max-width: 60rem;
     display: flex;
@@ -12,12 +16,14 @@
     align-items: stretch;
 }
 
+/* Divider */
 .about-divider {
     width: 0.25rem;
     background: var(--accent-color);
     border-radius: var(--border-radius);
 }
 
+/* Content Grid */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,6 +37,7 @@
     font-size: 1rem;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .about-editorial {
         flex-direction: column;
@@ -47,6 +54,7 @@
     }
 }
 
+/* General Text */
 .about-text {
     max-width: 65rem;
     font-size: 1rem;
@@ -54,43 +62,43 @@
     color: var(--text-secondary-color);
 }
 
+/* About Us Cards styled like service cards */
 #about-us .card {
     background: var(--contact-card-bg);
     border-radius: 14px;
+    padding: 26px 22px; /* match services */
     box-shadow: var(--shadow);
-    transition:
-            transform 0.35s ease,
-            box-shadow 0.35s ease,
-            background 0.35s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.8s ease forwards;
 }
 
-#about-us .card::before {
+/* Bottom line hover effect */
+#about-us .card::after {
     content: "";
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-            120deg,
-            rgba(214,127,61,0.15),
-            rgba(214,127,61,0.05),
-            transparent
-    );
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    transition: width 0.4s ease;
 }
 
+/* Hover animation */
 #about-us .card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-overlay);
-    background: var(--service-card-hover-bg);
 }
 
-#about-us .card:hover::before {
-    opacity: 1;
+#about-us .card:hover::after {
+    width: 100%;
 }
 
+/* Text stays above pseudo-element */
 #about-us .card h5,
 #about-us .card p,
 #about-us .card div {
@@ -98,5 +106,10 @@
     z-index: 1;
 }
 
-
-
+/* Fade-in reveal animation */
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
