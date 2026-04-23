@@ -125,6 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
         initContactForm(container); // Initialize EmailJS form after HTML is loaded
     });
     loadSection("footer");
+    loadSection("whatsappfloating", (container) => {
+        initWhatsAppButton(container);
+    });
+
 });
 
 // Smooth scroll + prevent clicks outside links
